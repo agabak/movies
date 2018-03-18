@@ -1,0 +1,24 @@
+{
+  "name": "y",
+  "description": "working with component in angular version 1.5.8",
+  "main": "index.js",
+  "authors": [
+    "agaba kabunga"
+  ],
+  "license": "ISC",
+  "homepage": "localhost:800",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.3",
+    "angular-route": "1.5.3",
+    "angular-component-router": "^0.2.1",
+    "bootstrap": "3.3.6",
+    "angular-mocks": "1.5.3"
+  }
+}

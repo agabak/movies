@@ -1,0 +1,30 @@
+<div ng-if="vm.movies.length > 0">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Length</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="movie in vm.movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.length}}</td>
+            <td>
+                <movie-rating value="movie.rating">
+                    <span class="glyphicon glyphicon-star"></span>
+                </movie-rating>
+            </td>
+            <td>
+              <button class="btn btn-default" ng-click="vm.upRating(movie)">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <button class="btn btn-default" ng-click="vm.downRating(movie)">
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>  
+                <a class="btn  btn-default" ng-link="['Details',{id:movie.id}]" class="btn btn-default">
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </a> 
+            </td>
+        </tr>
+    </table>
+</div>
