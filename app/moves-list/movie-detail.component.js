@@ -30,8 +30,12 @@
     angular.module('psMovies')
        .component('movieDetails',{
            templateUrl:'app/moves-list/movie-detail.component.html',
-          // $canActivate: ['$timeout', activate],
            controllerAs: 'vm',
+               $routeConfig:[
+               {path:'/overview', component:'movieOverview', name:'Overview'},
+               {path: '/cast', component:'movieCast', name:'Cast'},
+               {path:'/director', component:'movieDirector', name:'Director'}
+           ],
            controller:['$http',controller]
        })
 }());
